@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@font-face {
+    font-family: HeroFont500;
+    src: url(../public/fonts/Lausanne-500.woff2);
+}
+@font-face {
+    font-family: HeroFont300;
+    src: url(../public/fonts/Lausanne-300.woff2);
+}
