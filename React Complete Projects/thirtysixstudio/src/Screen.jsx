@@ -36,8 +36,7 @@ function Screen({startIndex}) {
         <>
             <canvas
                 ref={screenRef}
-                className='w-8
-                0 h-80'
+                className='w-80 h-80'
                 id='canvas'></canvas>
         </>
     )
