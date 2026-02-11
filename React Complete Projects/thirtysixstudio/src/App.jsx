@@ -12,6 +12,7 @@ const App = () => {
           })}
         </div>
       ))}
+      <Screen startIndex={0}/>
     </div>
   )
 }
