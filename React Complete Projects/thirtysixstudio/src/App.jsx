@@ -6,6 +6,9 @@ import { useEffect, useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Circ, Expo } from "gsap/all";
+import HeroBottom from "./components/HeroBottom";
+import Header from "./components/Header";
+import HeroSection from "./components/HeroSection"
 
 function App() {
   const [showCanvas, setShowCanvas] = useState(false);
@@ -64,7 +67,10 @@ function App() {
   }, []);
 
   return (
+
     <>
+    <Header />
+    <HeroSection />
       <span
         ref={growingSpan}
         className="growing rounded-full block fixed -top-5 -left-5 w-5 h-5"
@@ -73,7 +79,7 @@ function App() {
         {showCanvas &&
           data[0].map((canvasdets, index) => <Canvas details={canvasdets} />)}
         <div className="w-full relative z-1 h-screen ">
-          <nav className="w-full p-8 flex justify-between z-50">
+          {/* <nav className="w-full p-8 flex justify-between z-50">
             <div className="brand text-2xl ">Thirtysixstudios</div>
             <div className="links flex gap-10">
               {[
@@ -91,8 +97,8 @@ function App() {
                 </a>
               ))}
             </div>
-          </nav>
-          <div className="textcontainer  w-full px-[20%]">
+          </nav> */}
+          {/* <div className="textcontainer  w-full px-[20%]">
             <div className="text w-[50%]">
               <h3 className="text-4xl leading-[1.2]">
                 At Thirtysixstudio, we build immersive digital experiences for
@@ -105,12 +111,12 @@ function App() {
               </p>
               <p className="text-md mt-10">scroll</p>
             </div>
-          </div>
-          <div className="w-full absolute bottom-0 left-0">
-            <h1
-              ref={headingref}
-              className=" zalando-sans text-[14.25vw] font-normal tracking-normal leading-48 text-center">Thirtysixstudio</h1>
-          </div>
+          </div> */}
+          {/* <div className="w-full absolute bottom-0 left-0">
+            <h1 ref={headingref} >
+              <HeroBottom />
+            </h1>
+          </div> */}
         </div>
       </div>
       <div className="w-full relative h-screen  mt-32 px-10">
