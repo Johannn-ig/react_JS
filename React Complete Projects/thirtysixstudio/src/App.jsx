@@ -107,21 +107,7 @@ function App() {
           </div>
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
             <div className="flex justify-center zalando-sans text-[15vw] font-normal tracking-[-5px] leading-44" ref={headingref} >
-              <span>T</span>
-              <span>h</span>
-              <span>i</span>
-              <span>r</span>
-              <span>t</span>
-              <span>y</span>
-              <span>s</span>
-              <span>i</span>
-              <span>x</span>
-              <span>s</span>
-              <span>t</span>
-              <span>u</span>
-              <span>d</span>
-              <span>i</span>
-              <span>o</span>
+              <span>T</span><span>h</span><span>i</span><span>r</span><span>t</span><span>y</span><span>s</span><span>i</span><span>x</span><span>s</span><span>t</span><span>u</span><span>d</span><span>i</span><span>o</span>
             </div>
           </div>
         </div>
@@ -129,14 +115,15 @@ function App() {
       <div className="w-full relative h-screen  mt-32 px-10">
         {showCanvas &&
           data[1].map((canvasdets, index) => <Canvas details={canvasdets} />)}
-        <h1 className="text-8xl tracking-tighter">about the brand</h1>
-        <p className="text-4xl leading-[1.8] w-[80%] mt-10 font-light">
-          we are a team of designers, developers, and strategists who are
-          passionate about creating digital experiences that are both beautiful
-          and functional, we are a team of designers, developers, and
-          strategists who are passionate about creating digital experiences that
-          are both beautiful and functional.
-        </p>
+        <div className="flex justify-evenly w-100%">
+          <h1 className="uppercase w-1/4 text-center">01 - What we do</h1>
+          <div className="w-1/4">
+            <h1 className="text-4xl">We aim to elevate digital production in the advertising space, bringing your ideas to life.</h1>
+            <p>As a contemporary studio, we use cutting-edge design practices and the latest technologies to deliver current digital work.</p>
+            <p>Our commitment to innovation and simplicity, paired with our agile approach, ensures your journey with us is smooth and enjoyable from start to finish.</p>
+          </div>
+
+        </div>
       </div>
     </>
   );
