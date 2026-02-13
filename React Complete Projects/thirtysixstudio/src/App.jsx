@@ -6,9 +6,8 @@ import { useEffect, useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Circ, Expo } from "gsap/all";
-import HeroBottom from "./components/HeroBottom";
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection"
+// import Header from "./components/Header";
+// import HeroSection from "./components/HeroSection"
 
 function App() {
   const [showCanvas, setShowCanvas] = useState(false);
@@ -69,8 +68,8 @@ function App() {
   return (
 
     <>
-    <Header />
-    <HeroSection />
+      {/* <Header /> */}
+      {/* <HeroSection /> */}
       <span
         ref={growingSpan}
         className="growing rounded-full block fixed -top-5 -left-5 w-5 h-5"
@@ -79,44 +78,52 @@ function App() {
         {showCanvas &&
           data[0].map((canvasdets, index) => <Canvas details={canvasdets} />)}
         <div className="w-full relative z-1 h-screen ">
-          {/* <nav className="w-full p-8 flex justify-between z-50">
-            <div className="brand text-2xl ">Thirtysixstudios</div>
-            <div className="links flex gap-10">
-              {[
-                "What we do",
-                "Who we are",
-                "How we give back",
-                "Talk to us",
-              ].map((link, index) => (
-                <a
-                  key={index}
-                  href={`#${link.toLowerCase()}`}
-                  className="text-md hover:text-gray-300"
-                >
-                  {link}
-                </a>
-              ))}
+          <nav className="mx-2 py-3 flex border-b border-[#F1EDED]">
+            <div className="brand">Thirtysixstudios</div>
+            <div className='flex justify-evenly w-full'>
+              <div>Light mode</div>
+              <div className="links flex gap-8 font-extralight">
+                {[
+                  "What we do",
+                  "Who we are",
+                  "How we give back",
+                  "Talk to us",
+                ].map((link, index) => (
+                  <a
+                    key={index}
+                    href={`#${link.toLowerCase()}`}>
+                    {link}
+                  </a>
+                ))}
+              </div>
             </div>
-          </nav> */}
-          {/* <div className="textcontainer  w-full px-[20%]">
-            <div className="text w-[50%]">
-              <h3 className="text-4xl leading-[1.2]">
-                At Thirtysixstudio, we build immersive digital experiences for
-                brands with a purpose.
-              </h3>
-              <p className="text-lg w-[80%] mt-10 font-normal">
-                We are a team of designers, developers, and strategists who are
-                passionate about creating digital experiences that are both
-                beautiful and functional.
-              </p>
-              <p className="text-md mt-10">scroll</p>
+          </nav>
+          <div className="textcontainer  px-[26vw] w-[75vw]">
+
+            <h2 className='pt-14 text-3xl font-light tracking-wide'>At Thirtysixstudio, we <br /> build digital assets and <br /> immersive experiences <br /> for purposeful brands.</h2>
+            <p className='pt-8 pb-6 font-extralight text-sm'>We're a boutique production studio focused on design, animation, and technology, constantly rethinking what digital craft can do for present-day ads and campaigns.</p>
+            <p className='text-[16px] font-light'>Scroll</p>
+
+          </div>
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+            <div className="flex justify-center zalando-sans text-[15vw] font-normal tracking-[-5px] leading-44" ref={headingref} >
+              <span>T</span>
+              <span>h</span>
+              <span>i</span>
+              <span>r</span>
+              <span>t</span>
+              <span>y</span>
+              <span>s</span>
+              <span>i</span>
+              <span>x</span>
+              <span>s</span>
+              <span>t</span>
+              <span>u</span>
+              <span>d</span>
+              <span>i</span>
+              <span>o</span>
             </div>
-          </div> */}
-          {/* <div className="w-full absolute bottom-0 left-0">
-            <h1 ref={headingref} >
-              <HeroBottom />
-            </h1>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="w-full relative h-screen  mt-32 px-10">
