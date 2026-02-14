@@ -13,11 +13,22 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+body.red-theme {
+  background-color: #fd2c2a;
+  color: black;
+  border-bottom-color: #eee;
+}
+.bdr {
+  border-bottom: 1.5px solid #f1eded;
+}
+body.red-theme .bdr {
+  border-bottom: 1px solid #454242;
+}
 
 canvas {
   pointer-events: none;
 }
 
-span.growing {
+/* span.growing {
   background-color: #fd2c2a;
-}
+} */
