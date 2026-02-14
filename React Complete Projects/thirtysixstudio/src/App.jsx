@@ -6,6 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Circ, Expo } from "gsap/all";
+import Section1 from "./components/section1/Section1";
 // import Header from "./components/Header";
 // import HeroSection from "./components/HeroSection"
 
@@ -68,8 +69,7 @@ function App() {
   return (
 
     <>
-      {/* <Header /> */}
-      {/* <HeroSection /> */}
+      
       <span
         ref={growingSpan}
         className="growing rounded-full block fixed -top-5 -left-5 w-5 h-5"
@@ -113,17 +113,8 @@ function App() {
         </div>
       </div>
       <div className="w-full relative h-screen  mt-32 px-10">
-        {showCanvas &&
-          data[1].map((canvasdets, index) => <Canvas details={canvasdets} />)}
-        <div className="flex justify-evenly w-100%">
-          <h1 className="uppercase w-1/4 text-center">01 - What we do</h1>
-          <div className="w-1/4">
-            <h1 className="text-4xl">We aim to elevate digital production in the advertising space, bringing your ideas to life.</h1>
-            <p>As a contemporary studio, we use cutting-edge design practices and the latest technologies to deliver current digital work.</p>
-            <p>Our commitment to innovation and simplicity, paired with our agile approach, ensures your journey with us is smooth and enjoyable from start to finish.</p>
-          </div>
-
-        </div>
+        {showCanvas && data[1].map((canvasdets, index) => <Canvas details={canvasdets} />)}
+        <Section1 />
       </div>
     </>
   );
