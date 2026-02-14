@@ -14,10 +14,10 @@ function TextWheel() {
   }, []);
 
   return (
-    <div className="absolute right-20 top-1/2 -translate-y-1/2">
+    <div className="absolute right-1/4 top-1/2 -translate-y-1/2">
       <div
         ref={wheelRef}
-        className="w-[300px] h-[300px] flex items-center justify-center"
+        className="w-52 h-52 flex items-center justify-center"
       >
         <svg viewBox="0 0 300 300" className="w-full h-full">
           <defs>
@@ -33,9 +33,7 @@ function TextWheel() {
           </defs>
 
           <text fontSize="16" fill="black" letterSpacing="3">
-            <textPath href="#circlePath">
-              THIRTYSIXSTUDIO — FOR ALL THINGS DIGITAL PRODUCTION —
-            </textPath>
+            <textPath href="#circlePath" className="text-[17.5px] font-bold">THIRTYSIXSTUDIO—FOR ALL THINGS DIGITAL PRODUCTION—</textPath>
           </text>
         </svg>
       </div>
