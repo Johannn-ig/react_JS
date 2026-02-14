@@ -6,35 +6,39 @@ import TextWheel from "./TextWheel";
 function HeroSection({ showCanvas }) {
   return (
     <>
-      {showCanvas &&
-        data[0].map((canvasdets, index) => (
-          <Canvas key={index} details={canvasdets} />
-        ))}
+      {showCanvas && (
+        <div className="fixed inset-0 pointer-events-none z-50">
+          {data[0].map((canvasdets, index) => (
+            <Canvas key={index} details={canvasdets} />
+          ))}
+        </div>
+      )}
 
-      <div className="relative w-full">
-  
-  {/* Existing Hero Text */}
-  <div className="textcontainer px-[26vw] w-[75vw]">
-    <h2 className="pt-14 text-3xl font-light tracking-wide">
-      At Thirtysixstudio, we <br />
-      build digital assets and <br />
-      immersive experiences <br />
-      for purposeful brands.
-    </h2>
 
-    <p className="pt-8 pb-6 font-extralight text-sm">
-      We're a boutique production studio focused on design,
-      animation, and technology, constantly rethinking what
-      digital craft can do for present-day ads and campaigns.
-    </p>
+      <div className="relative w-full z-10">
 
-    <p className="text-[16px] font-light">Scroll</p>
-  </div>
+        {/* Existing Hero Text */}
+        <div className="textcontainer px-[26vw] w-[75vw]">
+          <h2 className="pt-14 text-3xl font-light tracking-wide">
+            At Thirtysixstudio, we <br />
+            build digital assets and <br />
+            immersive experiences <br />
+            for purposeful brands.
+          </h2>
 
-  {/* 🔥 Rotating Wheel */}
-  <TextWheel />
+          <p className="pt-8 pb-6 font-extralight text-sm">
+            We're a boutique production studio focused on design,
+            animation, and technology, constantly rethinking what
+            digital craft can do for present-day ads and campaigns.
+          </p>
 
-</div>
+          <p className="text-[16px] font-light">Scroll</p>
+        </div>
+
+        {/* 🔥 Rotating Wheel */}
+        <TextWheel />
+
+      </div>
 
     </>
   );
